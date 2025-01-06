@@ -18,7 +18,7 @@
             case("ya.ru"):
             var spans = document.getElementsByTagName("span");
             for (var i = 0; i < spans.length; i++) {
-                if (spans[i].innerText.trim().toLowerCase() === "реклама") {
+                if (spans[i].innerText.startsWith("Реклама · ") || spans[i].innerText.trim().toLowerCase() === "реклама") {
                     spans[i].style.color = 'red';
                     let li_el = spans[i];
                     while (li_el.tagName !== 'LI') {
